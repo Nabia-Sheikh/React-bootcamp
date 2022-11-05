@@ -1,6 +1,6 @@
 import Todo from "../model/todoModel.js";
 
-const addTodo = async (req, res) => {
+export const addTodo = async (req, res) => {
   try {
     const { data } = req.body;
     const newTodo = new Todo({
@@ -15,4 +15,12 @@ const addTodo = async (req, res) => {
   }
 }
 
-export default addTodo;
+export const getTodo = async (req, res) => {
+  try {
+    const todo = await Todo.find().sort({ createdAt: -1 });
+    res.status(200).json(todo);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+}
+
