@@ -1,9 +1,20 @@
 import express from "express"
 import connectDB from "./database/db.js"
+import Routes from "./routes/todoRoutes.js"
 const app = express()
+import cors from "cors"
 
-const PORT = 8080
+app.use(cors())
+
+// Connect to MongoDB
 connectDB()
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`)
-})
+
+// Middleware
+app.use(express.json())
+
+// Routes
+app.use('/api', Routes)
+
+// Server
+const PORT = process.env.PORT || 5000
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
