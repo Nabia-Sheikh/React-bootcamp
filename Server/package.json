@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "A simple todo app in MERN.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nabia-Sheikh/React-bootcamp.git"
+  },
+  "author": "Nabia-Sheikh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nabia-Sheikh/React-bootcamp/issues"
+  },
+  "homepage": "https://github.com/Nabia-Sheikh/React-bootcamp#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
