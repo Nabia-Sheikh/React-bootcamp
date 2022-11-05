@@ -20,5 +20,26 @@ input{
   border-bottom: 1px solid #2c3e50;
   color: #2c3e50;
   padding: 5px;
+}
 
+.task {
+  background-color: #34495e;
+  padding: 15px;
+  margin: 5px;
+  overflow-x: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task span {
+  color: #FFFFFF;
+}
+
+.icon {
+  float: right;
+  margin-right: 20px;
+}
+
+article {
+  display: grid;
 }
