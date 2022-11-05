@@ -20,3 +20,12 @@ export const getTodo = () => async (dispatch) => {
         console.log("Error while calling getTodo API ", error.message)
   }
 }
+
+export const toggleTodo = (id) => async (dispatch) => {
+  try {
+    const res = await axios.get(`${API_URL}/api/toggleTodo/${id}`);
+    dispatch({ type: GETALL_TODO, payload: res.data });
+  } catch (error) {
+        console.log("Error while calling toggleTodo API ", error.message)
+  }
+}

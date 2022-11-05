@@ -9,7 +9,6 @@ const Todos = () => {
   const dispatch = useDispatch()
 
   const todos = useSelector(state => state.todo)
-  console.log(todos);
 
   useEffect(() => {
     dispatch( getTodo() )
