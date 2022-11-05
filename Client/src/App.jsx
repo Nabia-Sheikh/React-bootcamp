@@ -1,5 +1,5 @@
 import React from "react"
-import Header from "src/components/Header"
+import Header from "./components/Header"
 import TodoForm from "./components/TodoForm"
 
 const App = () => {
