@@ -1,0 +1,24 @@
+body{
+  width: 50%;
+  margin: 0 auto;
+}
+
+header{
+  text-align: center;
+}
+
+h1{
+  font-size: 100px;
+  font-weight: 200;
+  color: #2c3e50
+}
+input{
+  width: 100%;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #2c3e50;
+  color: #2c3e50;
+  padding: 5px;
+
+}
