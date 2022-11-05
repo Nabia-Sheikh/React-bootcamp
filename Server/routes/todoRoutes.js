@@ -4,6 +4,6 @@ const route = express.Router();
 
 route.post("/addTodo", addTodo)
 route.get("/getTodo", getTodo)
-route.put("/toggleTodo", toggleTodo)
+route.get("/toggleTodo/:id", toggleTodo)
 
 export default route;

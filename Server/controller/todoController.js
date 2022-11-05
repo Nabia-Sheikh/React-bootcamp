@@ -26,12 +26,13 @@ export const getTodo = async (req, res) => {
 
 export const toggleTodo = async (req, res) => {
   try {
-    const { id } = req.body
-    const todo = await Todo.findById(id)
+    const { id }  = req.params;
+    console.log(id);
+    const todo = await Todo.findById(id);
+    console.log(todo);
     const updatedTodo = await Todo.findByIdAndUpdate(
       id,
       { done: !todo.done },
-      { new: true }
     )
     res.status(200).json(updatedTodo)
   } catch (error) {
